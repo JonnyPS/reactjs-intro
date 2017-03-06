@@ -36,3 +36,21 @@ similar to how quotations marks signal the beginning and end of a text string.
 
 Accessing Variables:
 
+You can access variables from within a JSX element, even if those variables were declared on the outside.
+The following will still work:
+
+var string = "I am text";
+ReactDOM.render(<h1>{string}</h1>, document.getElementById('app'));
+
+Output = I am text;
+
+In JSX variables can also be used to set attributes on an html document.
+
+Example:
+var goose = /images/goose.png;
+var gooseImg = <img src={goose} />;
+
+ReactDOM.render(gooseImg, document.getElementById('app'));
+
+Output = image of the goose variable source.
+
