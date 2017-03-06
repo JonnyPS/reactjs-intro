@@ -1,0 +1,38 @@
+So far we've been writing regular html within javascript, known as JSX elements.
+In this part we go further and write regular javascript within the html within the javascript.
+This will change the way elements get rendered.
+
+Example:
+ReactDOM.render(
+	<h1>2 + 3</h1>,
+	document.getElementById('app')
+)
+
+What will get rendered in the browser?
+Answer: 2 + 3
+
+However, if we were to render the html content housed within curly braces, it would render as a regular javascript expression would.
+
+Example:
+ReactDOM.render(
+	<h1>{2 + 3}</h1>,
+	document.getElementById('app')
+)
+
+What will get rendered in the browser?
+Answer: 5
+
+Example 2:
+ReactDOM.render(
+	<h1>{ Math.PI.toFixed(3) }</h1>,
+	document.getElementById('app')
+)
+
+What will get rendered in the browser?
+Answer: 3.142
+
+The curly braces themselves won't be translated as javascript, they are purely markers to signal when javascript starts and ends,
+similar to how quotations marks signal the beginning and end of a text string.
+
+Accessing Variables:
+

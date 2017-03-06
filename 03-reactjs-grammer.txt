@@ -1,0 +1,19 @@
+Grammer in JSX elements is mostly the same as html elements, but there are a few differences to be aware of.
+
+Class:
+writing this in html is correct:
+<h1 class=header">I am a header</h1>;
+
+In react this will not work.
+'Class' is a reserved word in javascipt, and as our JSC gets translated in to javascript, this will cause conflicts.
+Instead, 'class' is written as 'className' in JSX.
+
+Example:
+<h1 className="header">I am a header</h1>;
+
+Self Closing Tags:
+Omitting self closing tags in html is usually fine.
+For example in html, '<br />' and '<br>' will both work.
+However, in react, only '<br />' will work.
+Omitting the self closing tag will throw up an error.
+The sam applies for the '<img>' and '<input>' tags.
