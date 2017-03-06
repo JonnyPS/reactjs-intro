@@ -1,0 +1,21 @@
+JSX elements must be rendered to appear in a web page
+
+Taking our example from the JSX Elements intro page, we will render the element on the screen so that it displays as html.
+
+JSX Element:
+var header = <h1>Hello World</h1>;
+
+Rendering the element:
+// require the react library, which gives us access to react methods 
+var React = require('react');
+
+// require the react-dom library, which gives us access to react DOM methods
+ReactDOM =require('react-dom');
+
+// the first element renders the above variable as html, the second argument tells us where in the DOM to render the element
+ReactDOM.render(header, document.getElementById('app'));
+
+Rendering JSX elements doesn't need to be done with variables, html can be directly inserted.
+The below example would output exactly the same as the above:
+
+ReactDOM.render(<h1>Hello World</h1>, document.getElementById('app'));
