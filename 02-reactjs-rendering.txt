@@ -22,3 +22,8 @@ ReactDOM.render(<h1>Hello World</h1>, document.getElementById('app'));
 
 The first argument tells us what to render, the second argument tells us where in the DOM to render the element.
 The element will be appended to whatever element is selected by the second argument.
+
+
+Referring to what we were saying in the intro, react is quick. 
+ReactDOM.render on renders DOM elements that have changed. That means that if you render exactly the same thing twice in a row, the second render will do nothing.
+This is controlled by something called the virtual dom.
