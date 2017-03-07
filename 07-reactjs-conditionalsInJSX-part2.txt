@@ -1,0 +1,21 @@
+
+An alternative way to use conditional statements in JSX is to use the ternary operator.
+It is more compact, and can be injected directly within the JSX element.
+
+Ternary Operator Example:
+
+x ? y : z
+
+If 'x' equates to true, then 'y' will be returned by the operator.
+If 'x' equates to false, then 'z' will be returned by the operator.
+
+In our example from the previous lesson, where we used a conditional statement to determine the value of the variable 'i':
+
+i >= 10 ? alert('i is equal or greater than 10!') : alert('i is less than 10!')
+
+Using this in a JSX element would look like the following:
+
+var headline = <h1>{ i >= 10 ? alert('i is equal or greater than 10!') : alert('i is less than 10!') }</h1>;
+
+
+ 
