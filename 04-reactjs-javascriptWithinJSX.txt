@@ -44,13 +44,26 @@ ReactDOM.render(<h1>{string}</h1>, document.getElementById('app'));
 
 Output = I am text;
 
+Setting variables as attributes:
+
 In JSX variables can also be used to set attributes on an html document.
 
 Example:
 var goose = /images/goose.png;
-var gooseImg = <img src={goose} />;
+var sideLength = 200;
+var gooseImg = <img 
+							 src={goose} 
+							 alt="goose" 
+						   height={sideLength} 
+						   width={sideLength} 
+						   />;
 
 ReactDOM.render(gooseImg, document.getElementById('app'));
 
-Output = image of the goose variable source.
+Output = image of the goose variable source, with a width and height of 200px.
+
+
+
+
+
 

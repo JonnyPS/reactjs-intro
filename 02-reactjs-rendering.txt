@@ -10,7 +10,7 @@ Rendering the element:
 var React = require('react');
 
 // require the react-dom library, which gives us access to react DOM methods
-ReactDOM =require('react-dom');
+ReactDOM = require('react-dom');
 
 // the render method accepts two arguments:
 ReactDOM.render(header, document.getElementById('app'));

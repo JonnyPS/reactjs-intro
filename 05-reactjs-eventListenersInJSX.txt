@@ -1,0 +1,23 @@
+
+JSX elements can have event listeners, just like html elements.
+
+Example:
+<img onClick={myFunc} />
+
+Conventions for naming event listeners follow these two rules:
+ - the first word is usually 'on' - example: 'onClick' / 'onMouseOver' etc.
+ - camel case is used.
+
+A list of valid event names can be found here:
+https://facebook.github.io/react/docs/events.html#supported-events
+
+An event listener attribute's value should be a function.
+The above example would only work if 'myFunc' was a valid function.
+
+Example:
+
+function myFunc(e) {
+	alert('hello world');
+}
+
+<img onClick={myFunc} />
