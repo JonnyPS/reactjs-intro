@@ -1,0 +1,21 @@
+
+You cannot inject an if statement into a JSX expression.
+
+This Example would not compile:
+
+<h1>{if (i = > 10) {alert{'i = ' + i} }</h1>
+
+
+A common method of expressing conditionals in JSX is to use a conditional statement to return the value of a variable, this variable can then be rendered.
+
+Example:
+
+if (i >= 10) {
+	var message = <h1>i is equal or greater than 10!</h1>;
+} else {
+	var message = <h1>i is less than 10!</h1>;
+}
+
+ReactDOM.render(message, document.getElementById('app'));
+
+The conditional statement is run, the value of the variable 'message' is set, and then we call the react method to render the element.
