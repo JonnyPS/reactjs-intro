@@ -1,0 +1,32 @@
+The && works best in conditionals that will either run some code, or do nothing at all.
+Rather than an if/else statement, where one piece of code or the other will run, this will only run on certain conditional outcomes.
+
+// generate a result of either true or false
+var bool = Math.random() < 0.5;
+
+var outcomes = (
+  <div>
+    <ul>
+      <li>other item</li>
+      <li>other item</li>
+      { !bool && <li>bool</li> }
+      { bool && <li>bool</li> }
+      <li>other item</li>
+    </ul>
+  </div>
+);
+
+When you see &&, either some code will run, or nothing will happen.
+In the list above, the outcome, depending on if the result is true or false, will generate eithe of the following outcomes:
+
+Outcome 1:
+other item
+other item
+false
+other item
+
+Outcome 2:
+other item
+other item
+true
+other item
