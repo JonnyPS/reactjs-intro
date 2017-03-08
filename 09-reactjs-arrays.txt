@@ -1,0 +1,35 @@
+React has a '.map' method for arrays.
+This iterates over an array, and is good for displaying list items for example.
+
+Example:
+
+var strings = ['first', 'second', 'third'];
+
+// iterate over the array, pass a parameter 'string' which will act as a placeholder for each array item
+var listItems = strings.map(function(string){
+	return <li>{ string }</li>;
+});
+
+// this will return the variable housing the '.map' method as a ul tag, the '.map' method returns li tags as children of the ul
+<ul>{ listItems }</ul>
+
+In the above example, '{listItems}' will evaluate to an array.
+
+Arrays and lists don't have to be treated this way, but they can be.
+Another, perhaps simpiler way is the following:
+
+// fine in JSX
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ul>
+
+// also fine in JSX
+var liArray = [
+  <li>item 1</li>, 
+  <li>item 2<li>, 
+  <li>item 3</li>
+];
+
+<ul>{liArray}</ul>

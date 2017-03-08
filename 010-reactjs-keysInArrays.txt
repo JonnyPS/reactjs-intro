@@ -1,0 +1,21 @@
+Keys are attributes.
+Keys do not do anything that you can see.
+They are used for React to 'remember' from one render to the next, what order things were in etc.
+This can be helpful for changing lists such as to-do-lists, or a shuffled list such as changing search results.
+
+Using previous Example:
+
+var strings = ['first', 'second', 'third'];
+
+// iterate over the array, pass a parameter 'string' which will act as a placeholder for each array item
+// This time pass a parameter 'i'
+var listItems = strings.map(function(string, i){
+	return <li key={ "li-"+i }>{ string }</li>;
+});
+
+Output:
+<ul>
+  <li key="li-1">first</li>
+  <li key="li-2">second</li>
+  <li key="li-3">third</li>
+</ul>
